@@ -1,0 +1,520 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color:#3e65da;
+}
+
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+	color: rgb(8, 8, 8);
+}
+nav .links {
+	float:right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li
+ {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 17px;
+	font-weight: bold;
+	color: rgb(241, 241, 13);
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: rgb(5, 5, 5);
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0, 0, 0, 0.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+
+}
+
+h1
+{
+	font-family:"Montserrat";
+	font-weight: bold;
+
+}
+p
+{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.max-width {
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: auto;
+}
+.home1
+{
+background-color: #867ae9;
+color: #fdfaf6;
+}
+
+.bg
+{
+	background-color: #867ae9 !important;
+}
+
+.scroll-up-btn {
+	position: fixed;
+	height: 45px;
+	width: 42px;
+	background: rgb(255, 1, 1);
+	right: 30px;
+	bottom: 10px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+	z-index: 9999;
+	font-size: 30px;
+	border-radius: 6px;
+	border-bottom-width: 2px;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+	bottom: 30px;
+	opacity: 1;
+	pointer-events: auto;
+}
+.scroll-up-btn:hover {
+	filter: brightness(90%);
+}
+
+.menu-btn {
+	color: #fff;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+.name
+{
+	color:rgb(243, 239, 0);
+}
+.surname
+{
+	font-size: 150%;
+
+}
+.giphy
+{
+	width: 50%;
+	height: 20%;
+	margin: 0 0 0 0;
+	padding:0 0 0 0 ;
+	padding-top: 0;
+}
+.about .title
+{
+	text-align: center;
+	font-weight: 900;
+	font-size: 40px;
+	padding-top: 9%;
+}
+.about  .pic
+{
+	width: 288px;
+    height: 350px;
+    padding-top: 5rem;
+    border-radius: 120px;
+    padding-bottom: 4rem;
+    margin-left: 100px;
+    margin-top: 35px;
+}
+.abouttext
+{
+	font-family: 'Quicksand', sans-serif;
+}
+.typing-2
+{
+	color:red;
+	/* font-size: 14px;
+	font-weight: 600; */
+}
+
+
+
+.navbar
+{
+	padding-bottom: 4.5rem;
+}
+
+.name1
+{
+	/* color: #867ae9; */
+	color: rgb(208, 255, 0);
+}
+.home{
+	color: brown;
+	text-align: center;
+	padding: 10% 0% 0% 0%;
+	background-image: url('./assets/images/giphy.gif');
+	/* background-size: 500px 500px; */
+	background-repeat: no-repeat ;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+.text-3
+{
+	color:orange;
+	font-weight: 900;
+	font-size: 2rem;
+	font-family: 'Ubuntu', sans-serif;
+}
+.intro
+{
+color: rgb(252, 1, 1);
+ font-weight: 900;
+ /* font-size:7rem; */
+ text-align: center;
+ padding-top: 12rem;
+ font-family: 'Lobster', cursive !important;
+}
+
+.about .abutme
+{
+	padding-top: 7rem;
+	padding-bottom: 4rem;
+}
+.text1
+{
+	/* font-family:"Montserrat"; */
+	font-family: 'Lobster', cursive;
+}
+.ruchi
+{
+	text-align: center;
+	font-weight: 900;
+	font-size: 40px;
+	/* padding-top: 1rem; */
+	padding-bottom: 1.5rem;
+}
+
+.intrests
+{
+	padding: 10% 0% 5% 0%;
+	text-align: center;
+	background-color: rgb(37, 4, 99);
+	z-index: 1;
+	color: antiquewhite;
+}
+
+.icon
+{
+  color:yellow;
+  margin-bottom: 1.5rem;
+  transform: scale(1.05);
+  transition: 1s;
+}
+.icon:hover
+{
+  color: #f83c0d;
+  transform: scale(1.5);
+}
+
+ .intre
+{
+	text-align: center;
+	padding-top: 2.5rem;
+	transform: scale(1.05);
+}
+
+.text
+{
+	font-weight: bold;
+	font-family: 'Ubuntu', sans-serif;
+	/* transition: color 0.3s ease; */
+	float: left;
+	opacity: 1;
+	transition: 1s;
+
+}
+.text:hover
+{
+	transform: scale(1.15);
+	color: #f83c0d;
+	  /* box-shadow: 2px 2px 2px black; */
+	  /* z-index: ; */
+	  text-shadow: none;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+
+  }
+
+
+  ::-webkit-scrollbar-track {
+	background: #3817ca;
+  }
+
+
+  ::-webkit-scrollbar-thumb {
+	background: rgb(37, 4, 99);
+	border-radius: 10px;
+  }
+
+
+  ::-webkit-scrollbar-thumb:hover {
+	background:darkorange
+  }
+
+  .skills
+  {
+	  padding-bottom: 7rem;
+  }
+
+  .skil
+  {
+	  text-align: center;
+	  font-family:"Montserrat";
+	  padding-top: 4rem;
+	  padding-bottom: 7%;
+	  padding-top: 7rem;
+  }
+
+  .skilname
+  {
+	  text-align: center;
+	  font-family:"Montserrat";
+  }
+  .skiltext
+  {
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+	padding-top: 6%;
+	padding-bottom: 8%;
+  }
+  .skilbutton
+  {
+	  border-radius: 20px;
+  }
+  .progtext
+  {
+	  text-align: center;
+	  font-family: 'Ubuntu', sans-serif;
+	  font-weight: bold;
+  }
+
+
+  /* .progname
+  {
+	  color: #000000;
+	  font-size: 1.5rem;
+	  font-family: 'Ubuntu', sans-serif;
+	  text-align: center;
+  } */
+  .box
+  {
+	  width: 400px;
+	  height: 250px;
+	  background:orange;
+	  margin:  20px;
+	  box-sizing: border-box;
+	  /* padding-bottom: 2rem; */
+	  position: relative;
+	  float: left;
+	  transition: 1s;
+	  overflow: hidden;
+	  border-radius: 10px;
+	  display: inline-block;
+
+  }
+  .box:hover
+  {
+	  transform: scale(1.15);
+	  background: #f83c0d;
+	  box-shadow: 2px 2px 2px #000;
+	  z-index: 1;
+  }
+  .myproj
+  {
+	  width: 100%;
+	  height: auto;
+	  background-color: rgb(37, 4, 99);
+
+	  /* padding: 10px; */
+	  /* background: #ddd; */
+	  /* margin: 100px auto; */
+	  display:flex;
+	  flex-direction: row;
+	  justify-content: space-around;
+	  flex-flow: wrap;
+	  /* grid-template-columns: repeat(auto-fit,minmax(28px,1fr));
+	  grid-gap: 10px; */
+	  /* justify-content: center; */
+		padding: 10% 0% 5% 0%;
+		/* text-align: center; */
+
+		/* z-index: 1; */
+	/* background-position: center; */
+	 /* box-sizing: border-box;	 */
+  }
+  @media screen and (max-width:1200px){
+	  .box{
+		  width: 40%;
+	  }
+  }
+  @media screen and (max-width:600px){
+	.box{
+		width: 90%;
+	}
+}
+  .projects
+{
+	padding: 10% 0% 5% 0%;
+	text-align: center;
+	background-color: rgb(37, 4, 99);
+	z-index: 1;
+	color: antiquewhite;
+}
+  .protitle
+  {
+	  text-align: center;
+	  font-family: "Montserrat";
+	  font-weight: 500;
+	  padding-top: 3rem;
+  }
+  .projtext
+  {
+	font-family: "Montserrat";
+	text-align: center;
+  }
+  .projtext2
+  {
+	  text-align: center;
+  }
+  .detailtitle
+  {
+	  text-align: center;
+	  font-family: "Montserrat";
+	  font-weight: 500;
+	  padding-top: 7rem;
+	  padding-bottom: 2.5rem;
+  }
+  .list-group
+  {
+	  font-size: 22px;
+  }
+  .qot
+  {
+	  padding-top: 3rem;
+	  font-size: 1.5rem;
+	  text-align: center;
+  }
+  /* .foot
+  {
+	  padding-bottom: 3 rem
+	  text-align: center;
+  } */
+  #footer
+  {
+	  text-align: center;
+	  font-family: "Montserrat";
+	  padding: 4% 2%;
+	  background-color: rgb(37, 4, 99);
+	  z-index: 1;
+	  color: antiquewhite;
+	  font-size: 1.3rem;
+  }
+  .icon1
+  {
+	padding-right: 1rem;
+	color: yellow;
+	transform: scale(1.05);
+	transition: 1s;
+
+
+  }
+  .icon1:hover
+  {
+	color: #f83c0d;
+	transform: scale(1.15);
+  }
